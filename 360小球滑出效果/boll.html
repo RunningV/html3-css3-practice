@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>360防丢小球滚动效果</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="../node_modules/jquery-1.11.3.min.js"></script>
+	<script src="./main.js"></script>
+</head>
+<body>
+	<div class="rugby">
+		<!-- 实现原理：
+			用css3将前四个小球和和底部阴影固定到最终显示的位置，并设li的opacity：0；
+			将第五个小球用css3的animation动画帧从左滚动到右边最终位置，在第五个小球滚动到前面每一个小球的地方时将次小球li的opacity设为1,，使小球显示出来。实际上只有第五个小球在滚动。
+		 -->
+		<ul>
+			<li><i></i><s></s></li>
+			<li><i></i><s></s></li>
+			<li><i></i><s></s></li>
+			<li><i></i><s></s></li>
+			<li class="five"><i></i><s></s></li>
+		</ul>
+	</div>
+</body>
+</html>

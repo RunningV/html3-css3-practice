@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: #dedede;
+}
+.rugby{
+	width: 800px;
+	height: 200px;
+	margin: 300px auto;
+	position: relative;
+}
+
+li{
+	position: absolute;
+	top: 0;
+	background-color: transparent;
+	opacity: 0;
+}
+
+li:nth-child(1){left: 0;}
+li:nth-child(2){left: 153px;}
+li:nth-child(3){left: 306px;}
+li:nth-child(4){left: 459px;}
+li:nth-child(5){left: 612px; opacity: 1;}
+
+i{
+	width: 173px;
+	height: 173px;
+	display: block;
+	background: transparent url(./picture.png) no-repeat;
+}
+li:nth-child(1)>i {background-position: 0 0;}
+li:nth-child(2)>i {background-position: -173px 0;}
+li:nth-child(3)>i {background-position: -348px 0;}
+li:nth-child(4)>i {background-position: -522px 0;}
+li:nth-child(5)>i {background-position: -696px 0;}
+
+s{
+	width: 173px;
+	height: 24px;
+	display: block;
+	background: transparent url(./picture.png) no-repeat -870px -128px;
+}
+
+/*第5个小球滚动动画*/
+.five_i{
+	-webkit-animation: roll_i 3s ease; 
+}
+@-webkit-keyframes roll_i {
+	from{transform: translateX(-1500px) rotateZ(0deg);}
+	to{transform: translateX(0px) rotateZ(720deg);}
+}
+
+.five_s{
+	-webkit-animation: roll_s 3s ease; 
+}
+@-webkit-keyframes roll_s {
+	from{transform: translateX(-1500px);}
+	to{transform: translateX(0px);}
+}
