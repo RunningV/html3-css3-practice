@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>百分比-响应时布局</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 100%;
+		}
+		.box>ul{
+			list-style: none;
+		}
+		.box>ul>li{
+			display: flex;
+			width: 33.3333%;
+			height: auto;
+			box-sizing: border-box;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+			float: left;
+			text-align: center;
+		}
+		.box>ul>li:nth-child(3n){
+			border-right: none;
+		}
+		.box>ul>li:after{
+			content: '';
+			width: 0;
+			height: 0;
+			padding-bottom: 75%;
+		}
+		li>a{
+			position: relative;
+			width: 100%;
+		}
+		li span{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background: url('./baobao.png') no-repeat;
+			background-size: cover;
+			position: absolute;
+			left: 50%;
+			top: 20%;
+			margin-left: -30px;
+		}
+		li .title{
+			margin-top: 45%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<a href="">
+					<span></span>
+					<div class="title">Hello World</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span></span>
+					<div class="title">Hello World</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span></span>
+					<div class="title">Hello World</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span></span>
+					<div class="title">Hello World</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span></span>
+					<div class="title">Hello World</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span></span>
+					<div class="title">Hello World</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
